@@ -61,10 +61,10 @@ def main():
 			except (KeyboardInterrupt, SystemExit):
 				raise
 			except Exception as e:
-				print str(e)
+				print('\n'+str(e))
 				retry=True
 				print('Connection error.. Retrying')
-		print(ctx + ' finished.')
+		print('\n' + ctx + ' finished.')
 
 	csvfile.close()
 
