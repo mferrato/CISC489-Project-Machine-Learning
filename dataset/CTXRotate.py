@@ -3,6 +3,9 @@ import numpy as np
 import math
 import os
 import sys
+#from PIL import Image
+#import scipy.ndimage
+#Image.MAX_IMAGE_PIXELS = 2212232130
 
 # Get distance between two points and floor it
 def distance_int(x1, y1, x2, y2):
@@ -12,8 +15,20 @@ def process_image(directory,path):
 	# Read in sample image
 	#im = cv2.imread('base_images/D13_032173_1031_XN_76S227W.tiff')
 	print('Working on ' + path)
-	print('Test')
 	im = cv2.imread(directory+'/'+path)
+	#im = Image.open(directory+'/'+path).convert('RGB')
+	#im = scipy.ndimage.imread(directory+'/'+path)
+	#im = np.array(im)
+	#print(type(im))
+	#print(im.tolist())
+	#im.shape
+	#im.dtype
+	#arr=np.zeros(10)
+	#print(arr)
+	#print(arr.dtype)
+	#im = im[:,:,::-1].copy()
+	print('Done reading')
+	#return
 	# Apply border to image, otherwise contour doesn't work
 	image=cv2.copyMakeBorder(im, top=10, bottom=10, left=10, right=10, borderType= cv2.BORDER_CONSTANT, value=[0,0,0] )
 	image2=cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -122,11 +137,12 @@ def process_image(directory,path):
 	del image
 
 def main():
-	if sys.argc >= 2:
+	if len(sys.argv) >= 2:
 		directory=sys.argv[1]
-		files = [f for f in os.listdir(directory) if os.path.isfile(f)]
-		for path in files:
-			process_image(directory+'/',path)
+		for path in os.listdir(directory):
+			process_image(directory,path)
+		else:
+			print(path + ' is not a file.')
 	else:
 		files = [f for f in os.listdir('.') if os.path.isfile(f)]
 		for path in files:
@@ -134,7 +150,8 @@ def main():
 
 if __name__ == '__main__':
 	#main()
-	process_image('base_images','P13_006229_0951_XN_84S014W.tiff')
+	#process_image('base_images','P13_006229_0951_XN_84S014W.tiff')
+	process_image('base_images','D13_032173_1031_XN_76S227W.tiff')
 	print('Finished')
 
 
