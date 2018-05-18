@@ -20,5 +20,11 @@ The Context Camera found on the Mars Reconnaissance Orbiter.
 
 We are using the [ISIS3 Software](https://isis.astrogeology.usgs.gov/) to handle the processing and cleanup of the CTX images (which is a similar process to what Planet Four did). We are also using the same set of images that Planet Four used. These images vary in quality, and a handful of images were taken during a period when Mars was covered in ice.
 
-![Image4](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/ice1.jpg)  
+![Image4](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/ice1.png)  
 Image of Mars surface covered in ice.
+
+Planet Four also defines a subset of the images as being "gold standard", meaning that they are the clearest images that we have available. These images also have classifications done by the Planet Four staff, and includes all possible classification categories, whereas the general, complete dataset only contains swiss and spiders.
+
+## Methods
+
+We are using the [DIGITs software](https://developer.nvidia.com/digits) to handle the execution of our machine learning algorithms and artificial neural network. Through DIGITs, we were able to create several different datasets for testing, and then use those datasets in different "jobs", where each job will allow us to train and test a neural network with various different settings.
