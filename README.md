@@ -11,7 +11,14 @@ Based on the project [Planet Four: Terrains](https://www.zooniverse.org/projects
 
 The images we are using are from the Mars Reconnaissance Orbiter (MRO). 
 
-![Image1](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/MRO.jpg)  
+![Image2](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/MRO.jpg)  
 
 The MRO was equipped with a special camera called a Context Camera (CTX) which was able to take the highest resolution images of Mars that are currently available. These images cover several hundred square km, and each pixel represents roughly 30 cm^2. In our project, we used ~90 raw CTX images, which were subdivided into over 20,000 800x600 px images. These images are grayscale, and represent various locations of Mars during different years and seasons.  
+
+![Image3](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/CTX.jpg)  
+The Context Camera found on the Mars Reconnaissance Orbiter.
+
 We are using the [ISIS3 Software](https://isis.astrogeology.usgs.gov/) to handle the processing and cleanup of the CTX images (which is a similar process to what Planet Four did). We are also using the same set of images that Planet Four used. These images vary in quality, and a handful of images were taken during a period when Mars was covered in ice.
+
+![Image4](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/ice1.jpg)  
+Image of Mars surface covered in ice.
