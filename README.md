@@ -79,7 +79,8 @@ Some of our results can be found in our .result files.
 
 ## Conclusion
 
-
+Our largest challenge in this project was getting the neural network to recognize the spiders terrain type. This terrain does not have very unique or discernable features, and the algorithm has trouble distinguishing it from no terrain. Additionally, getting the images was an adventure; the raw image files are in a weird IMG format, and need to be processed through other softwares. I beleive this format is better for compression, and thus would be less data to transfer back from the spacecraft. Overall, I believe we achived mild success, or at least were moving in the right direction.
 
 ## Future Direction
 
+If we were to continue this project, we would start adding our own layers to the machine learning algorithm; a layer that can identify the blotchy spiders terrain. If we could create a neural network that could achieve relatively equal accuracy to humans, than we could quickly map large portions of Mars' terrain, which could help map routes or landing sites on future missions to Mars.
