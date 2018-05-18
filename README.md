@@ -27,4 +27,27 @@ Planet Four also defines a subset of the images as being "gold standard", meanin
 
 ## Methods
 
-We are using the [DIGITs software](https://developer.nvidia.com/digits) to handle the execution of our machine learning algorithms and artificial neural network. Through DIGITs, we were able to create several different datasets for testing, and then use those datasets in different "jobs", where each job will allow us to train and test a neural network with various different settings.
+We are using the [DIGITs software](https://developer.nvidia.com/digits) to handle the execution of our machine learning algorithms and artificial neural network. Through DIGITs, we were able to create several different datasets for testing, and then use those datasets in different "jobs", where each job will allow us to train and test a neural network with various different settings. In terms of algorithms, we had LeNet, AlexNet, and GoogLeNet available to us, but only used AlexNet and GoogLeNet because LeNet is designed for much smaller images than ours.
+
+### Gold Dataset - Squashed down to 512x512 px  
+**GoogLeNet**  
+
+
+### Gold Dataset - Squashed down to 256x256 px  
+
+
+### Total Dataset - Squashed down to 512x512 px  
+
+
+### Total Dataset - Squashed down to 256x256 px  
+
+
+## Problems and Hardships  
+We are having trouble getting the neural network to recognize the spiders terrain. Spiders appears as dots or splotches on the surface, and are often misclassified as having no discernable features. Some images will have spiders appear as dark splotches, and others will have them as light splotches.
+
+![Image5](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/spiders1.png)  
+Surface containing spiders terrain.
+
+We also see some outliers in our dataset. Some images contain the surface covered in ice, which are significantly darker than the average image. We also see some images as very blurry or grainy. Using the gold standard dataset can allieviate some of this, hwoever.
+
+
