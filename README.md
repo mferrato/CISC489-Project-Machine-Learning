@@ -42,6 +42,20 @@ We also used these methods on the full dataset. When using the full dataset, it 
 ### Total Dataset - Squashed down to 256x256 px  
 Squashing the total dataset down to 256x256 is even more concerning, as we are worried that the loss in quality will be too much for some of the subpar images.
 
+### Image Alterations  
+We also tried a few alterations to the images to see if it would train the neural network any better. It didn't. But here's what we tried.
+
+We were worried that since some images are light, and other are dark. So we took all of our images, and inverted the pixels; black pixels became white, and white became black. Here's an example of a before and after.
+
+![Image6](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/spiders2.png)  
+![Image7](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/spiders2_invert.png)  
+
+We also attempted to do some color correction by ommiting the background of the image. For example, we could take a dark backgrounded image, and replace it with white. The image below is an example.
+
+![Image8](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/blackwhite.png)  
+
+Again, neither of these approaches helped in the long run.
+
 ## Problems and Hardships  
 We are having trouble getting the neural network to recognize the spiders terrain. Spiders appears as dots or splotches on the surface, and are often misclassified as having no discernable features. Some images will have spiders appear as dark splotches, and others will have them as light splotches.
 
