@@ -66,7 +66,16 @@ We also see some outliers in our dataset. Some images contain the surface covere
 
 ## Results
 
+For our main results, we are looking for accuracy of predicting swiss cheese, spiders, and none terrains against our entire 20,000+ dataset. Overall, the neural network is very good at predicting swiss and none. Spiders poses a problem, however. The highest accuracy neural network we achieved was using GoogLeNet, gold dataset, squashing image to 512x512 px, taking a random crop of 256x256, no extra data (such as inverted colors or color correction), and limiting the categories to 150 images (which is the size of the gold spider dataset).
 
+Total Accuracy = 86.09%  
+Swiss Accuracy = 100.00%  
+None Accuracy = 85.57%  
+Spiders Accuracy = 60.20%  
+
+This neural network was a little bit less accurate for the none dataset (others were able to get 95% on none), but it is by far the most accurate for spiders (others were around 30-40% accurate).
+
+Some of our results can be found in our .result files.
 
 ## Conclusion
 
