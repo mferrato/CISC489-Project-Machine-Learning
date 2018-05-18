@@ -30,17 +30,17 @@ Planet Four also defines a subset of the images as being "gold standard", meanin
 We are using the [DIGITs software](https://developer.nvidia.com/digits) to handle the execution of our machine learning algorithms and artificial neural network. Through DIGITs, we were able to create several different datasets for testing, and then use those datasets in different "jobs", where each job will allow us to train and test a neural network with various different settings. In terms of algorithms, we had LeNet, AlexNet, and GoogLeNet available to us, but only used AlexNet and GoogLeNet because LeNet is designed for much smaller images than ours.
 
 ### Gold Dataset - Squashed down to 512x512 px  
-**GoogLeNet**  
+We squashed all of the images in the gold dataset from the base 800x600 image size down to 512x512 as this should work better with the algorithms. We also reserved a smaller percentage of the images to be used as a "validation" dataset, allowing DIGITs to test the neural network along the way and give us estimated accuracy of prediction. When using the 512x512 images in GoogLeNet or AlexNet, we tested it by taking a random crop of the images of 256x256 (which is what the algorithms are designed to use), and we also ran it without cropping.
 
 
 ### Gold Dataset - Squashed down to 256x256 px  
-
+We also squashed the gold dataset striaght from 800x600 px to 256x256 px. We are worried that by squashing it by so much, we may lose a significant ammount of the features that the algorithm will need to properly identify the terrain.
 
 ### Total Dataset - Squashed down to 512x512 px  
-
+We also used these methods on the full dataset. When using the full dataset, it is more difficult to test, because we can only test using "training images", or images that the neural network has already seen. Also, when using the full dataset, we are also including images that contain ice and images that may be subpar quality. However, this does give us a much larger selection of images.
 
 ### Total Dataset - Squashed down to 256x256 px  
-
+Squashing the total dataset down to 256x256 is even more concerning, as we are worried that the loss in quality will be too much for some of the subpar images.
 
 ## Problems and Hardships  
 We are having trouble getting the neural network to recognize the spiders terrain. Spiders appears as dots or splotches on the surface, and are often misclassified as having no discernable features. Some images will have spiders appear as dark splotches, and others will have them as light splotches.
@@ -48,6 +48,15 @@ We are having trouble getting the neural network to recognize the spiders terrai
 ![Image5](https://github.com/mferrato/CISC489-Project-Machine-Learning/blob/master/dataset/poster_images/spiders1.png)  
 Surface containing spiders terrain.
 
-We also see some outliers in our dataset. Some images contain the surface covered in ice, which are significantly darker than the average image. We also see some images as very blurry or grainy. Using the gold standard dataset can allieviate some of this, hwoever.
+We also see some outliers in our dataset. Some images contain the surface covered in ice, which are significantly darker than the average image. We also see some images as very blurry or grainy. Using the gold standard dataset can allieviate some of this, however.
 
+## Results
+
+
+
+## Conclusion
+
+
+
+## Future Direction
 
